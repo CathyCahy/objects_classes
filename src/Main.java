@@ -3,13 +3,16 @@ public class Main {
         Author chekhov = new  Author("Антон","Чехов");
         Book firstBook = new Book("Вишневый сад", chekhov, 1983);
         Author pushkin = new Author("Александр","Пушкин");
-        Book secondBook = new Book("Евгений Онегин", pushkin, 2005);
-        firstBook.setBookDate(2003);
-        System.out.println("chekhov = " + chekhov.getFirstName() + " " + chekhov.getLastName());
-        System.out.println("firstBook = " + firstBook.getBookName());
-        System.out.println("pushkin = " + pushkin.getFirstName() + " " + pushkin.getLastName());
-        System.out.println("secondBook = " + secondBook.getBookName());
-        System.out.println("Год выпуска книги " + firstBook.getBookName() + " " +firstBook.getBookDate());
+        Book secondBook = new Book("Евгений Онегин", pushkin, 1999);
+        Book thirdBook = new Book("Евгений Онегин", pushkin, 2003);
+        secondBook.setBookDate(2003);
+        System.out.println(firstBook);
+        System.out.println(secondBook);
+        System.out.println(pushkin);
+        System.out.println(chekhov.equals(pushkin));
+        System.out.println(secondBook.equals(thirdBook));
+        System.out.println(firstBook.hashCode());
+        System.out.println(pushkin.hashCode());
 
 
     }
